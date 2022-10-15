@@ -1,0 +1,80 @@
+
+
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Merriweather', 'Times New Roman', Times, serif;
+    line-height: 18px;
+}
+
+
+:root {
+    --para-dg-1: 32px;
+    --para-dg-2: 24px;
+    --para-dg-3: 16px;
+    --para-dg-4: 4px;
+
+    --red-trim: #C01E1E;
+    --nav-selected-bg: #F0F0F0;
+    --nav-unselected-clr: #474747;
+}
+
+.p2, .p3, .p4 {
+    display: none;
+}
+
+
+.main-wrapper {
+    padding-top: 16px;
+    margin: 0 auto;
+    width: 700px;
+    overflow: hidden;
+    height: 100vh;
+}
+
+
+.header {
+    margin-bottom: 18px;
+}
+
+.navbar {
+    display: flex;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+}
+
+.navbar > div {
+    flex-grow: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--nav-unselected-clr);
+    height: 46px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar > div:hover {
+    cursor: pointer;
+    background-color: var(--nav-selected-bg);
+    color: var(--red-trim);
+}
+
+.n1 {
+    background-color: var(--nav-selected-bg);
+}
+
+.n1 > div {
+    color: var(--red-trim);
+}
+
