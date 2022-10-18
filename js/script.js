@@ -1,56 +1,63 @@
 
 
-// document elements
-var navbar;
-var n1;
-var n2;
-var n3;
-var n4;
-
-
-// state
-var page = 1;
+// doc elements
+var painting_info_nav;
+var pin1;
+var pin2;
+var pin3;
+var pin4;
+var pin5;
+var pin6;
+var pin7;
+var pin8;
 
 // styling
-var nav_selected_bg = "#F0F0F0";
-var red_trim = "#C01E1E";
-var nav_unselected_clr = "#474747";
+var pin_selected_bg_clr = "#C01E1E";
+var pin_selected_clr = "#E8E8E8";
+
 
 function init_doc_elems(){
-    navbar = document.querySelector('.navbar');
-    n1 = document.querySelector('.n1');
-    n2 = document.querySelector('.n2');
-    n3 = document.querySelector('.n3');
-    n4 = document.querySelector('.n4');
+    pin1 = document.querySelector('.pin1');
+    pin2 = document.querySelector('.pin2');
+    pin3 = document.querySelector('.pin3');
+    pin4 = document.querySelector('.pin4');
+
+    pin5 = document.querySelector('.pin5');
+    pin6 = document.querySelector('.pin6');
+    pin7 = document.querySelector('.pin7');
+    pin8 = document.querySelector('.pin8');
+
 }
 
 window.onload = function () {
     init_doc_elems();
 
-    n1.addEventListener('click', () => change_page(1));
-    n2.addEventListener('click', () => change_page(2));
-    n3.addEventListener('click', () => change_page(3));
-    n4.addEventListener('click', () => change_page(4));
+    pin1.addEventListener('click', () => change_pin(1));
+    pin2.addEventListener('click', () => change_pin(2));
+    pin3.addEventListener('click', () => change_pin(3));
+    pin4.addEventListener('click', () => change_pin(4));
+    
+    pin5.addEventListener('click', () => change_pin(5));
+    pin6.addEventListener('click', () => change_pin(6));
+    pin7.addEventListener('click', () => change_pin(7));
+    pin8.addEventListener('click', () => change_pin(8));
+
 }
 
-function change_page(page_no){
+function change_pin(pin_no){
+    for (let i = 1; i < 9; i++){
+        let pin = document.querySelector('.pin' + i);
+        let pin_body = document.querySelector('.pin' + i + 'b');
 
-    // loop through each nav/page
-    for (let i = 1; i < 5; i++){
+        if (pin_no == i){
 
-        let p = document.querySelector('.p' + i);
-        let n = document.querySelector('.n' + i);
-        let nt = document.querySelector('.nt' + i);
-
-        if (page_no == i){
-            n.style.backgroundColor = nav_selected_bg;
-            nt.style.color = red_trim;
-            console.log(n.innerHtml);
-            p.style.display = "block";
+            pin.classList.add("pin_selected");
+            pin.classList.remove("pin_unselected");
+            pin_body.style.display = 'block';
         } else {
-            n.style.backgroundColor = '#FFFFFF';
-            nt.style.color = nav_unselected_clr;
-            p.style.display = "none";
+            pin.classList.add("pin_unselected");
+            pin.classList.remove("pin_selected");
+            pin_body.style.display = 'none';
         }
     }
 }

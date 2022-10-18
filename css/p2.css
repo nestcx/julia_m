@@ -1,0 +1,92 @@
+:root {
+    --pin_selected_bg_clr: #C01E1E;
+    --pin_selected_clr: #E8E8E8;
+}
+
+.the_painting_img {
+    width: 100%;
+}
+
+.content {
+    margin-top: 32px;
+}
+
+.pin2b, .pin3b, .pin4b, .pin5b, .pin6b, .pin7b, .pin8b {
+    display: none;
+}
+
+.pin_body {
+    margin-bottom: 200px;
+}
+
+.painting_info_nav {
+    display: grid;
+    gap: 6px 12px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 18px;
+    margin-bottom: 36px;
+}
+
+.painting_info_nav > div {
+    display: flex;
+    align-items: center;
+}
+
+.painting_info_nav > div > div {
+    margin-left: 12px;
+    font-size: 12px;
+}
+
+.pin_selected, .painting_info_nav > div:hover{
+    background-color: var(--pin_selected_bg_clr);
+    color: var(--pin_selected_clr);
+}
+
+.painting_info_nav > div:hover {
+    cursor: pointer;
+}
+
+.pin_unselected {
+    background-color: white;
+    color: black;
+}
+
+
+
+/* Picture embedding styling */
+
+.pin2b_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.op2-left {
+    overflow: hidden;
+}
+
+.op2-left > .image_box {
+    margin: 0 12px 12px 0;
+    float: left;
+}
+
+
+.op2-right > .image_box {
+    float: right;
+    margin: 0 0 12px 12px;
+}
+
+
+.painting_info_nav img {
+    width: 50px;
+}
+
+.centered-image {
+    width: 100%;
+}
+
+
+.mid-gallery {
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+}
