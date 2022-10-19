@@ -120,11 +120,11 @@ body {
 
 .divider {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     height: 1px;
     background-color: var(--red-trim);
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: 48px;
+    margin-bottom: 48px;
 }
 
 
